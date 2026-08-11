@@ -1,0 +1,93 @@
+.stairs-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.stairs-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.stairs-blocks {
+  display: flex;
+  flex-direction: column; /* ✅ блоки в стовпчик */
+  gap: 20px;
+  align-items: center;
+}
+
+/* Картка */
+.stairs-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Головне фото */
+.main-block-img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  max-width: 100%;
+}
+
+/* Таблиця характеристик */
+.stairs-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.stairs-table th,
+.stairs-table td {
+  border: 1px solid #ddd;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.stairs-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.stairs-table tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.stairs-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Детальні фото */
+.details-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.detail-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.detail-img:hover {
+  transform: scale(1.1);
+}

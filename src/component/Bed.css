@@ -1,0 +1,218 @@
+/* Контейнер */
+.bed-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bed-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Список блоків (в стовпчик) */
+.bed-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Картка блоку */
+.bed-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 20px;
+  max-width: 90%;
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.bed-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Головне фото */
+.bed-main-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Детальні фото у ряд */
+.bed-details-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  justify-content: center;
+}
+
+.bed-detail-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.bed-detail-img:hover {
+  transform: scale(1.1);
+}
+
+/* Інформаційний блок */
+.bed-order-info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #444;
+}
+
+.bed-order-phone {
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: bold;
+  color: #28a745;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bed-order-phone:hover {
+  color: #1e7e34;
+}
+
+/* Форма додавання */
+.bed-add-form,
+.bed-add-detail-form {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 400px;
+}
+
+.bed-add-form input,
+.bed-add-form textarea,
+.bed-add-detail-form input,
+.bed-add-detail-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+.bed-add-form input:focus,
+.bed-add-form textarea:focus,
+.bed-add-detail-form input:focus,
+.bed-add-detail-form textarea:focus {
+  border-color: #28a745;
+  outline: none;
+  box-shadow: 0 0 5px rgba(40,167,69,0.3);
+}
+
+/* Кнопки */
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.btn-add-block { background: #28a745; color: white; }
+.btn-detail { background: #007bff; color: white; }
+.btn-delete { background: #dc3545; color: white; }
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-add-block:hover { background: #218838; }
+.btn-detail:hover { background: #0069d9; }
+.btn-delete:hover { background: #c82333; }
+
+/* Адмінські кнопки */
+.bed-admin-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Лайтбокс */
+.bed-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s ease;
+}
+
+.bed-lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.bed-lightbox::after {
+  content: "✕";
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 32px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Анімація */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Пагінація */
+.bed-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  gap: 10px;
+}
+
+.bed-pagination button {
+  padding: 8px 14px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.bed-pagination button:hover {
+  background: #f0f0f0;
+}
+
+.bed-pagination .active {
+  background: #28a745;
+  color: white;
+  border-color: #28a745;
+}
